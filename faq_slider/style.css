@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&amp;display=swap');
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #666;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  color: #fff;
+  background-color: #6bb170;
+}
+
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* Custom */
+.list__faq-q {
+  background-color: #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.list__faq-q__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.list__faq-a {
+  background-color: #ddd;
+  max-height: 0;
+  transition: max-height .3s, padding .3s;
+  overflow: hidden;
+}
+
+.list__faq-q__arrow {
+  transition: transform .3s;
+}
+
+.list__faq-q.active .list__faq-q__arrow {
+  transform: rotate(90deg);
+}
+
+.list__faq-q.active ~ .list__faq-a {
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 90%;
+  }
+}
