@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+/* Base */
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.m-12 {
+  margin: 3rem;
+}
+
+/* Custom */
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.draggable-list__item {
+  display: flex;
+}
+
+.draggable-list__item:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list__item__number {
+  background-color: var(--background-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.draggable-list__item__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.draggable-list__item.over .draggable-list__item__trigger {
+  background-color: #eaeaea;
+}
+
+.draggable-list__item__trigger__name {
+  margin-right: 1rem;
+}
+
+.draggable-list__item.right .draggable-list__item__trigger__name {
+  color: #3ae374;
+}
+
+.draggable-list__item.wrong .draggable-list__item__trigger__name {
+  color: #ff3838;
+}
+
+.check-btn {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
