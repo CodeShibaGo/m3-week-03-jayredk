@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-family: "Permanent Marker", sans-serif;
+  line-height: 1.5;
+  background-image: url('img/bg.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  z-index: -1;
+}
+
+/* Utility */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.fs-3 {
+  font-size: 1rem;
+}
+
+.fs-6 {
+  font-size: 2rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+/* Custom */
+.year {
+  font-size: 150px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 20px;
+  z-index: -1;
+}
+
+#countdown {
+  display: none;
+}
+
+@media screen and (min-width: 420px) {
+  .fs-3 {
+    font-size: 1.25rem;
+  }
+
+  .fs-6 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .fs-3 {
+    font-size: 1.5rem;
+  }
+  .fs-6 {
+    font-size: 3rem;
+  }
+
+  .year {
+    font-size: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fs-3 {
+    font-size: 2rem;
+  }
+  .fs-6 {
+    font-size: 4rem;
+  }
+}

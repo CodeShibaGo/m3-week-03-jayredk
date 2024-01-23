@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(141, 179, 254, 1) 92%
+  );
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom */
+h1 {
+  margin-bottom: 8rem;
+}
+
+.music-container {
+  display: flex;
+  box-shadow: 0 20px 20px 0 rgba(141, 179, 254, 0.6);
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.music-info {
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem 1rem 0 0;
+  width: calc(100% - 2.5rem);
+  top: 0;
+  left: 1.25rem;
+  padding: 1rem;
+  padding-left: 10rem;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+}
+
+.music-container.play .music-info {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+
+.music-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: rgb(141, 179, 254);
+  border-radius: 4px;
+  height: 100%;
+  width: 0%;
+  transition: width .1s linear;
+}
+
+.img-container {
+  width: 110px;
+  position: relative;
+}
+
+.img-container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.img-container .img-cover {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  bottom: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container .img-cover {
+  animation-play-state: running;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.action-btn {
+  border: none;
+  background-color: transparent;
+  color: #dfdbdf;
+  font-size: 1.5rem;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.action-btn:hover {
+  color: #000;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.action-btn--lg {
+  color: #cdc2d0;
+  font-size: 2rem;
+  /* width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center; */
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

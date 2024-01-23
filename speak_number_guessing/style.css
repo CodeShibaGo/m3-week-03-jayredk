@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('images/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.fz-1 {
+  font-size: 1.5rem;
+}
+
+.fz-2 {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.guess {
+  display: inline-block;
+  border: 1px solid #dedede;
+  padding: 1rem;
+  margin: 1.5rem;
+  font-size: 2rem;
+}
+
+.play-again {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
