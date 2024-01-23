@@ -3,10 +3,10 @@
 
 |  #  |    Project     | Demo |
 | :-: | :------------: | :---: |
-| 01  | 表單標題 | Demo |
-| 02  | 無限捲動 | Demo |
-| 03  | 新年倒數計時 | Demo |
-| 04  | FAQ Slider | Demo |
-| 05  | 音樂播放器 | Demo |
-| 06  | 可排序清單 | Demo |
-| 07  | 擴充字 | Demo |
+| 01  | 表單驗證 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/form_validator/) |
+| 02  | 無限捲動 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/Infinite_scroll/) |
+| 03  | 新年倒數計時 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/new_year_countdown/) |
+| 04  | FAQ Slider | [Demo](https://jayredk.github.io/m3-week-03-jayredk/faq_slider/) |
+| 05  | 音樂播放器 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/music_player/) |
+| 06  | 可排序清單 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/sortable_list/) |
+| 07  | 猜數字 | [Demo](https://jayredk.github.io/m3-week-03-jayredk/speak_number_guessing/) |
